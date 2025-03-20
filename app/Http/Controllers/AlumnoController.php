@@ -67,7 +67,7 @@ class AlumnoController extends Controller
         $request->validate([
             'nombre' => 'required',
             'correo' => 'required|email|unique:alumnos,correo,' . $alumno->id,
-            'fecha_nacimiento' => 'required|date_format:d/m/Y',
+            'fecha_nacimiento' => 'required|date',
             'ciudad' => 'required',
         ]);
 
